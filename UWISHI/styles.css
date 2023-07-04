@@ -1,7 +1,7 @@
 /*
 color   1A120B
 color   #3C2A21
-
+ab633f
 
 */
 *{
@@ -39,22 +39,34 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 80px;
+    padding: 0 80px;
     background-color: #D9D9D9;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
 }
 
 #navbar{
     display: flex;
+    height: 60px;
+    box-sizing: border-box;
     align-items: center;
-    justify-content: center;
-    padding:10px;
+    justify-content: space-between;
+    padding: 0 15px;
     margin: 0;
+
+}
+
+#header div{
+    height: 100%;
 }
 
 #navbar li{
+    height: 100%;
     list-style: none;
+    margin: 0px;
     padding: 0 30px;
+    display: flex;
+    align-items: center;
+    position: relative
 }
 
 #navbar li a{
@@ -62,13 +74,13 @@ p{
     font-size: 16px;
     font-weight: 600;
     color:#1A120B;
-    position: relative;
+    
 }
 
 #loginbutton{
     background-color: #3C2A21; /* Green */
     border: none;
-    color: white;
+    color: #D9D9D9;
     padding: 5px 30px ;
     text-align: center;
     text-decoration: none;
@@ -76,24 +88,44 @@ p{
     font-size: 16px;
 }
 
-#navbar li a:after{
+#navbar li:not(#cart-icon):after{
     content: "  ";
     position: absolute;
-    background-color: #3C2A21;
+    background-color: #1A120B;
     height: 3px;
     width: 0%;
     left: 0;
-    bottom: -10px;
+    bottom: 0px;
     transition: 0.3s ease;
 }
 
-#navbar li a:hover{
+#navbar li:not(#cart-icon):hover{
+    background-color: #3C2A21;
+    transition: 0.3s ease;
+}
+
+#navbar li:not(#cart-icon):hover > a{
+    color:#D9D9D9;
     font-size: 18px;
-    color: 3C2A21;
     transition: 0.3s ease;
-    color: 
 }
 
-#navbar li a:hover:after{
+#cart-icon > a svg:hover{
+    fill: #3C2A21;
+    transform: scale(1.3);
+    transition: 0.3s ease;
+}
+
+#navbar li:hover:after{
     width: 100%;
 }
+
+#loginbutton:hover{
+    border: 2px solid #3C2A21;
+    background-color: #D9D9D9;
+    font-weight: 800;
+    color: #3C2A21;
+    transition: 0.3s ease;
+}
+
+/*D5CEA3*/
