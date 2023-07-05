@@ -63,7 +63,7 @@ p{
     height: 100%;
     list-style: none;
     margin: 0px;
-    padding: 0 30px;
+    padding: 10px 30px;
     display: flex;
     align-items: center;
     position: relative
@@ -74,7 +74,6 @@ p{
     font-size: 16px;
     font-weight: 600;
     color:#1A120B;
-    
 }
 
 #loginbutton{
@@ -88,7 +87,7 @@ p{
     font-size: 16px;
 }
 
-#navbar li:not(#cart-icon):after{
+#navbar li:not(.cart-icon):after{
     content: "  ";
     position: absolute;
     background-color: #1A120B;
@@ -99,18 +98,24 @@ p{
     transition: 0.3s ease;
 }
 
-#navbar li:not(#cart-icon):hover{
+#mobile{
+    display: none;
+    align-items: center;
+
+}
+
+#navbar li:not(.cart-icon):hover{
     background-color: #3C2A21;
     transition: 0.3s ease;
 }
 
-#navbar li:not(#cart-icon):hover > a{
+#navbar li:not(.cart-icon):hover > a{
     color:#D9D9D9;
     font-size: 18px;
     transition: 0.3s ease;
 }
 
-#cart-icon > a svg:hover{
+.cart-icon > a svg:hover{
     fill: #3C2A21;
     transform: scale(1.3);
     transition: 0.3s ease;
@@ -128,4 +133,86 @@ p{
     transition: 0.3s ease;
 }
 
+#close{
+    display:none;
+}
+
+
 /*D5CEA3*/
+@media (max-width: 990px){
+    #header{
+        height: 60px;
+    }
+
+    #navbar{
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: -14px;
+        right: -300px;
+        height: 100vh;
+        width: 200px;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.06);
+        padding: 80px 0px 0px 10px;
+        transition: 0.3s ease;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+        height: auto;
+        list-style: none;
+        position: relative;
+        width:100%;
+        transition: 0.3s ease;
+    }
+
+    #navbar li > .cart-icon{
+        visibility: none;
+    }
+
+
+    #header div{
+        height: 100%;
+        width: 100%;
+        transition: 0.3s ease;
+    }
+
+    #mobile{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    #mobile i{
+        color:#1A120B;
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    #loginbutton{
+        width: 100%;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #close{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #1A120B;
+        font-size: 24px;
+    }
+
+    #carte{
+        display: none;
+    }
+
+    #close{
+        display: block;
+    }
+}
