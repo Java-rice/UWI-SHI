@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>UWI-SHII | {%block title %}{% endblock title%}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'app/css/styles.css'%}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <nav id="header">
+            <a href="#"><img id="mainlogo" position="fixed" width="150rem" margin="0 0"src="{% static 'app/images/banners/mainlogo.png'%}" alt="UWI-SHII logo" class="logo"></a>
+            <ul class="navbar">
+                <li><a class="tabs" href="{% url "home"%}">Home</a></li>
+                <li><a class="tabs" href="{% url "menu"%}">Menu</a></li>
+                <li><a class="tabs" href="{% url "about"%}">About</a></li>
+                <li><a class="tabs" href="{% url "jobs"%}">Jobs</a></li>
+                <li><a class="tabs" href="{% url "contact"%}">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <div class="fas fa-bars" id="menu-btn"></div>
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                <button type="submit" id="loginbutton">Login</button>
+            </div>
+
+            <!--<div id="cart">
+                <a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#1A120B" class="bi bi-basket3-fill" viewBox="0 0 16 16">
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/>
+                </svg></a>
+                <i id="bar"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#3C2A21" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg></i>
+            </div>-->
+        </nav>
+        {% block main-content %}{% endblock main-content %}
+        <footer class="footer">
+            <div class="right-note">
+                <img id="mainlogo" width="150" margin="10px 0"src="{% static 'app/images/banners/bigletter.png'%}" alt="UWI-SHII logo" class="logo">
+                <img width="200" margin="10px 0"src="{% static 'app/images/banners/smallletter.png'%}" alt="UWI-SHII logo" class="logo">
+                <p>2989 Recto Ave, Sampaloc, Manila, 1008 Metro Manila</p>
+            </div>
+            <div class="left-note">
+                <a href="#"> Terms and Agreement </a>
+                <p>Copyright @ 2023, UWI-SHI</p>
+                <p>All rights reserved</p>
+            </div>
+        </footer>
+    <script src="{% static 'app/javascript/script.js'%}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
+</html>
